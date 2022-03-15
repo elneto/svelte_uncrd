@@ -8,7 +8,11 @@ module.exports = {
     theme: {
       colors: {
         'un-light-gray': '#f2f2f2',
+        'un-dark-gray': '#4d4d4d',
         'un-blue': '#009edb',
+      },
+      fontFamily:{
+        titles: ['"Roboto Condensed"', '"Helvetica Neue"', 'Arial', 'ui-sans-serif'],
       },
     },
   };
