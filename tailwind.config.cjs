@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily:{
         titles: ['"Roboto Condensed"', '"Helvetica Neue"', 'Arial', 'ui-sans-serif'],
+        body: ["Roboto", "Helvetica Neue", 'Helvetica', 'Arial', 'ui-sans-serif'],
       },
     },
   };
