@@ -1,17 +1,26 @@
----
+<script>
 // Component Script (JavaScript)
 // Main nav menu
----
+
+const menuItems = [
+    // {name:'Home', url:'/'},
+    {name:'About', url:'/about'},
+    {name:'Themes', url:'#'},
+    {name:'Activities', url:'#'},
+    {name:'Publications', url:'#'},
+    {name:'News', url:'#'},
+];
+</script>
 
 <nav class="shadow-lg">
     <div class="max-w-6xl">
         <div class="flex justify-between">
         
         <div class="hidden md:flex items-center space-x-1">
-            <a href="" class="bg-un-light-gray py-4 px-5 font-semibold">Home</a>
-            <a href="" class="bg-un-menu-dark text-white py-4 px-5 font-semibold hover:text-black hover:bg-un-light-gray transition duration-300">About</a>
-            <a href="" class="bg-un-menu-dark text-white py-4 px-5 font-semibold hover:text-black hover:bg-un-light-gray transition duration-300">Themes</a>
-            
+            <a href="/" class="bg-un-light-gray py-4 px-5 font-semibold">Home</a>
+            {#each menuItems as {name, url}}
+                <a href={url} class="bg-un-menu-dark text-white py-4 px-5 font-semibold hover:text-black hover:bg-un-light-gray transition duration-300">{name}</a>
+            {/each}
         </div>
         <div class="mr-10 flex md:hidden">
             <button class="inline-flex items-center justify-center p-2 rounded-md text-dark">
