@@ -1,14 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import firstImage from '../images/tuberculosis.jpg'; 
+import HomePage from '../components/HomePage.astro';
 ---
 <BaseLayout>
 	<!-- content -->
-	<div class="mt-8 grid gap-x-8 grid-cols-12">
-		<img src={firstImage} alt="first" class="w-full col-span-12 lg:col-span-9">
-		<div class="mt-4 col-span-12 lg:col-span-3 lg:mt-0">
-			<h2 class="text-un-menu-dark font-bold font-titles text-2xl mb-5 pb-3 border-b-[3px] border-un-blue">UNCRD Webinars on 3R and Circular Economy</h2>
-			<p>Tuberculosis remains one of the deadliest infectious killers. Each day, over 4100 people lose their lives to TB and close to 28,000 fall ill with this preventable and curable disease. Global efforts to combat TB have saved an estimated 66 million lives since the year 2000. However, in the context of COVID-19, for the first time in over a decade, TB deaths increased in 2020. For this year’s World TB Day, WHO calls to ‘Invest to End TB. Save Lives.’ There is still an urgent need to invest resources to ramp up the fight against TB and achieve the commitments to end TB made by global leaders.</p>
-		</div>
-	</div>
+	<HomePage/>
 </BaseLayout>
