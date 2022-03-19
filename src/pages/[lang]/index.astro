@@ -3,10 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import HomePage from '../../components/HomePage.astro';
 
 export async function getStaticPaths() {
-  return [
-    { params: { lang: 'en' } },
-    { params: { lang: 'jp' } },
-  ];
+  return ['en', 'jp'].map(lang => ({ params: { lang: lang } }));
 }
 
 const {lang} = Astro.request.params;

@@ -1,0 +1,12 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const {content} = Astro.props;
+console.log(content);
+---
+
+<BaseLayout lang={content.lang}>
+	<h1>{content.title}</h1>
+	<h2>{content.date} - {content.time}</h2>
+    <h3 class="uppercase">{content.category}</h3>
+    <slot/>
+</BaseLayout>

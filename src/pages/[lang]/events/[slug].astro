@@ -1,0 +1,26 @@
+---
+import Event from '../../../layouts/Event.astro';
+import { Debug } from 'astro/components';
+
+export async function getStaticPaths() {
+  const data = Astro.fetchContent('../../../content/events/*.md');
+  return data.map(event => {
+    console.log(event.lang);
+    console.log(event.slug);
+    return [
+      { params: { lang: event.lang, slug: event.slug }, props: { event } },
+    ]   
+  })
+};
+
+const {lang, slug} = Astro.request.params;
+const {event} = Astro.props;
+console.log(event);
+---
+
+<!-- {data.map(event => (
+  <Debug {event}/> -->
+  
+<Event content={event}/>
+
+<!-- ))}  -->
