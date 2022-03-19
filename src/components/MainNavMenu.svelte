@@ -6,7 +6,7 @@ const menuItems = [
     // {name:'Home', url:'/'},
     {name:'About', url:'/about'},
     {name:'Themes', url:'#'},
-    {name:'Activities', url:'#'},
+    {name:'Events', url:'#'},
     {name:'Publications', url:'#'},
     {name:'News', url:'#'},
 ];
