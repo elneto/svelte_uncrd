@@ -4,7 +4,7 @@
 
 export let lang;
 import svgLogo from '../images/logo-en.svg';
-import {nameSite} from '../constants.js';
+import {nameSite} from '../commonTranslations.js';
 </script>
 
 <div class="py-10 flex flex-col md:flex-row">
