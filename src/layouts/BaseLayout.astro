@@ -1,9 +1,10 @@
 ---
 import '../styles/global.css';
-import TopGrayBar from '../components/TopGrayBar.astro'; 
+import TopGrayBar from '../components/TopGrayBar.svelte'; 
 import LogoNameRow from '../components/LogoNameRow.astro'; 
 import MainNavMenu from '../components/MainNavMenu.svelte'; 
 import "@fontsource/roboto-condensed"; 
+const {lang} = Astro.props;
 ---
 <html lang="en">
 	<head>
@@ -13,7 +14,7 @@ import "@fontsource/roboto-condensed";
 	</head>
 	<body>
 		<!-- top gray bar -->
-		<TopGrayBar/>
+		<TopGrayBar lang={lang}/>
 		<div class="container mx-auto">
 			<!-- un logo row -->
 			<LogoNameRow/>

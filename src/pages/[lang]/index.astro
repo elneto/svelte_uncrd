@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HomePage from '../../components/HomePage.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'jp' } },
+  ];
+}
+
+const {lang} = Astro.request.params;
+---
+<BaseLayout lang={lang}>
+	<!-- content -->
+	<HomePage/>
+</BaseLayout>
