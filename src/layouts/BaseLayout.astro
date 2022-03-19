@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+import TopGrayBar from '../components/TopGrayBar.astro'; 
+import LogoNameRow from '../components/LogoNameRow.astro'; 
+import MainNavMenu from '../components/MainNavMenu.astro'; 
+import "@fontsource/roboto-condensed"; 
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Astro</title>
+	</head>
+	<body>
+		<!-- top gray bar -->
+		<TopGrayBar/>
+		<div class="container mx-auto">
+			<!-- un logo row -->
+			<LogoNameRow/>
+			<!-- navigation -->
+			<MainNavMenu/>
+            <!-- content goes here -->
+            <slot/>
+		</div>		
+	</body>
+</html>
