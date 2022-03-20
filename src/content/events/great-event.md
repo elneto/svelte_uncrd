@@ -1,11 +1,14 @@
 ---
 layout: ../../layouts/Event.astro
+id: 0
 lang: en
 slug: great-event
 title: Great Event
 date: 23 March 2022
 time: 10:00am 
+location: Rome
 category: Policy Forum
+summary: 
 ---
 # This is my event.
 
