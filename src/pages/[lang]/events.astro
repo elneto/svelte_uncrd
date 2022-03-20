@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HomePage from '../../components/HomePage.astro';
+import {languages} from '../../commonTranslations.js';
+
+export async function getStaticPaths() {
+  return languages.map(lang => ({ params: { lang: lang } }));
+}
+
+const {lang} = Astro.request.params;
+---
+<BaseLayout lang={lang}>
+	<p>I will be the events list</p>
+</BaseLayout>

@@ -1,12 +1,13 @@
 <script>
 // Component Script (JavaScript)
 // Main nav menu
+export let lang;
 
 const menuItems = [
     // {name:'Home', url:'/'},
-    {name:'About', url:'/about'},
+    {name:'About', url:`/${lang}/about`},
     {name:'Themes', url:'#'},
-    {name:'Events', url:'#'},
+    {name:'Events', url:`/${lang}/events`},
     {name:'Publications', url:'#'},
     {name:'News', url:'#'},
 ];
@@ -17,7 +18,7 @@ const menuItems = [
         <div class="flex justify-between">
         
         <div class="hidden md:flex items-center space-x-1">
-            <a href="/" class="bg-un-light-gray py-4 px-5 font-semibold">Home</a>
+            <a href="/{lang}" class="bg-un-light-gray py-4 px-5 font-semibold">Home</a>
             {#each menuItems as {name, url}}
                 <a href={url} class="bg-un-menu-dark text-white py-4 px-5 font-semibold hover:text-black hover:bg-un-light-gray transition duration-300">{name}</a>
             {/each}
