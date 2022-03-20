@@ -11,9 +11,9 @@ const goodData = data.filter(d => (typeof d.slug !== "undefined" && d.lang.local
 // badData.map(d => console.log(d));
 </script>
 
-<ul class="prose prose-blue">
+<ul class="prose prose-blue w-max">
     {#each goodData as event}
-        <li><a href="/{event.lang}/events/{event.slug}">{event.title}</a></li>
+        <li>{event.date} - <a href="/{event.lang}/events/{event.slug}">{event.title}</a></li>
     {/each}
 </ul>
 
