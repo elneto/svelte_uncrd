@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { Markdown } from 'astro/components';
 const {content} = Astro.props;
 ---
 
@@ -7,5 +8,5 @@ const {content} = Astro.props;
 	<h1>{content.title}</h1>
 	<h2>{content.date} - {content.time}</h2>
     <h3 class="uppercase">{content.category}</h3>
-    <slot/>
+    <Markdown content={content.astro.source} />
 </BaseLayout>
