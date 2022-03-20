@@ -5,8 +5,10 @@ const {content} = Astro.props;
 ---
 
 <BaseLayout lang={content.lang}>
-	<h1>{content.title}</h1>
-	<h2>{content.date} - {content.time}</h2>
-    <h3 class="uppercase">{content.category}</h3>
-    <Markdown content={content.astro.source} />
+    <article class="prose prose-blue">
+        <h1>{content.title}</h1>
+        <h2>{content.date} - {content.time}</h2>
+        <h3 class="uppercase">{content.category}</h3>
+        <Markdown content={content.astro.source} />
+    </article>
 </BaseLayout>

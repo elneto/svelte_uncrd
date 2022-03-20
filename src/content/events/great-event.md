@@ -14,3 +14,7 @@ A page will be built for this post.
 To build and publish this post:
 - update the frontmatter to `draft: false` or
 - remove the `draft` property entirely.
+
+## This is an h2
+
+And **this** is a link to https://google.com
