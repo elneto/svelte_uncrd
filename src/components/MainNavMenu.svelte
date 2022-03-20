@@ -12,7 +12,7 @@ const menuItems = [
 ];
 </script>
 
-<nav class="shadow-lg">
+<nav class="shadow-lg mb-8">
     <div class="max-w-6xl">
         <div class="flex justify-between">
         
