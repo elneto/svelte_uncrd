@@ -4,8 +4,8 @@ id: 1
 lang: jp
 slug: tokyo-skating
 title: 素晴らしいイベント
-date: 2022年3月23日
-time: 午前10時
+date: 23 March 2022
+time: 10:00
 location: Tokyo
 category: Research
 summary: 

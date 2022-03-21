@@ -4,11 +4,7 @@ export let lang;
 export let data;
 import {eventsT} from '../commonTranslations.js';
 
-// this filters per language and per undefined
-const goodData = data.filter(d => (typeof d.slug !== "undefined" && d.lang.localeCompare(lang) == 0));
-// const badData = data.filter(d => !goodData.includes(d))
-// badData.map(d => console.log(d));
-let items = goodData;
+let items = data;
 let currentPage = 1;
 let pageSize = 10;
 $: paginatedItems = paginate({ items, pageSize, currentPage });
@@ -19,6 +15,7 @@ $: paginatedItems = paginate({ items, pageSize, currentPage });
 
 <div class="items">
     {#each paginatedItems as event}
+        {event.date.substring(event.date.length-4)}
         <div class="item flex border-l-un-blue border-l-[3px] mb-3 px-2 prose md:min-w-full">
             <div class="flex flex-col gap-0 px-3">
                 <span class="text-2xl font-semibold">{ event.date.substring(0,2) }</span>

@@ -9,7 +9,30 @@ export async function getStaticPaths() {
 
 const {lang} = Astro.request.params;
 const data = Astro.fetchContent('../../content/events/*.md');
+
+function stringToDate(s){
+  const arrDate = s.split(' ');
+  const day = arrDate[0].trim();
+  const month = arrDate[1].trim();
+  const year = arrDate[2].trim();
+
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  
+  return new Date(year, months.indexOf(month), day);
+}
+
+// this filters per language and per undefined
+let goodData = data.filter(d => (typeof d.slug !== "undefined" && d.lang.localeCompare(lang) == 0));
+goodData.sort( (a,b) => {
+  if (stringToDate(b.date) < stringToDate(a.date)){
+    return -1;
+  }
+  else if (stringToDate(b.date) > stringToDate(a.date)){
+    return 1;
+  }
+  return 0;
+});
 ---
 <BaseLayout lang={lang} >
-  <EventsList lang={lang} data={data} client:load/>
+  <EventsList lang={lang} data={goodData} client:load/>
 </BaseLayout>
