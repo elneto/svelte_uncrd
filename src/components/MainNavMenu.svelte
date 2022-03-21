@@ -33,10 +33,11 @@ import {home} from '../commonTranslations.js';
         </div>
     </div>
     <div id="mobile-menu" class:expanded on:transitionend={focusFirstDropdownLink}>
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 md:hidden">
-        <a href="" class="cursor-pointer text-white block px-3 py-2 hover:text-blue-500 rounded-md text-base font-medium transition duration-300">Home </a>
-        <a href="" class="cursor-pointer text-white block px-3 py-2 hover:text-blue-500 rounded-md text-base font-medium transition duration-300">Projects</a>
-        <a href="" class="cursor-pointer bg-purple-600 text-white block px-3 py-2 hover:bg-purple-800 rounded-md text-base font-medium transition duration-300">Donate</a>
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col md:hidden">
+            <a href="/{lang}" class="bg-un-light-gray py-4 px-5 font-semibold">{home[lang]}</a>
+            {#each menuItems[lang] as {name, url}}
+                <a href={'/' + lang + url} class="bg-un-menu-dark text-white py-4 px-5 font-semibold hover:text-black hover:bg-un-light-gray transition duration-300">{name}</a>
+            {/each}
         </div>
     </div>
 </nav>
