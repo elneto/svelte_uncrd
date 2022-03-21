@@ -10,7 +10,7 @@ export const welcome = {
     'jp':'国連へようこそ'
 };
 
-export const events = {
+export const eventsT = {
     'en':'Events', 
     'jp':'イベント'
 };

@@ -11,5 +11,5 @@ const {lang} = Astro.request.params;
 const data = Astro.fetchContent('../../content/events/*.md');
 ---
 <BaseLayout lang={lang} >
-  <EventsList lang={lang} data={data}/>
+  <EventsList lang={lang} data={data} client:load/>
 </BaseLayout>

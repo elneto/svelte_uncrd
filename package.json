@@ -17,6 +17,7 @@
   "dependencies": {
     "@astrojs/renderer-svelte": "^0.5.2",
     "@fontsource/roboto": "^4.5.3",
-    "@fontsource/roboto-condensed": "^4.5.4"
+    "@fontsource/roboto-condensed": "^4.5.4",
+    "svelte-paginate": "^0.0.1"
   }
 }
