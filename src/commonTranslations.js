@@ -9,3 +9,8 @@ export const welcome = {
     'en':'Welcome to the United Nations', 
     'jp':'国連へようこそ'
 };
+
+export const events = {
+    'en':'Events', 
+    'jp':'イベント'
+};

@@ -1,6 +1,7 @@
 <script>
 export let lang;
 export let data;
+import {events} from '../commonTranslations.js';
 
 // this filters per language and per undefined
 const goodData = data.filter(d => (typeof d.slug !== "undefined" && d.lang.localeCompare(lang) == 0));
@@ -9,7 +10,7 @@ const goodData = data.filter(d => (typeof d.slug !== "undefined" && d.lang.local
 </script>
 
 <article class="prose min-w-[74%]">
-<h1>Events</h1>
+<h1>{events[lang]}</h1>
 
 {#each goodData as event}
     <div class="flex border-l-un-blue border-l-[3px] mb-3 px-2 prose md:min-w-full">
