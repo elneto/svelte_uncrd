@@ -19,9 +19,10 @@ const goodData = data.filter(d => (typeof d.slug !== "undefined" && d.lang.local
         </div>
         
         <div class="flex flex-row">
-            <span>
-                <a href="/{event.lang}/events/{event.slug}">{event.title.length > 80 ? event.title.substring(0,80)+"..." : event.title }</a>
-            </span>
+            <div class="flex flex-col">
+                <a href="/{event.lang}/events/{event.slug}" class="text-xl font-normal no-underline">{event.title.length > 80 ? event.title.substring(0,80)+"..." : event.title }</a>
+                {event.location}
+            </div>
         </div>
     </div>
     <hr class="mt-0 mb-3 w-2/3">
