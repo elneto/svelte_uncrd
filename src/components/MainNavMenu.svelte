@@ -2,6 +2,11 @@
 // Component Script (JavaScript)
 // Main nav menu
 export let lang;
+let expanded = false;
+
+const focusFirstDropdownLink = ({ target }) => {
+		target.firstElementChild.focus()
+	}
 
 import {menuItems} from '../commonTranslations.js';
 import {home} from '../commonTranslations.js';
@@ -18,7 +23,7 @@ import {home} from '../commonTranslations.js';
             {/each}
         </div>
         <div class="mr-10 flex md:hidden">
-            <button class="inline-flex items-center justify-center p-2 rounded-md text-dark">
+            <button class="inline-flex items-center justify-center p-2 rounded-md text-dark" aria-expanded={expanded} aria-haspopup="true" aria-label="Nav toggle" on:click={() => {expanded = !expanded; console.log(expanded);}}>
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                 <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z">
                 </path>
@@ -27,7 +32,7 @@ import {home} from '../commonTranslations.js';
         </div>
         </div>
     </div>
-    <div class="hidden">
+    <div id="mobile-menu" class:expanded on:transitionend={focusFirstDropdownLink}>
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 md:hidden">
         <a href="" class="cursor-pointer text-white block px-3 py-2 hover:text-blue-500 rounded-md text-base font-medium transition duration-300">Home </a>
         <a href="" class="cursor-pointer text-white block px-3 py-2 hover:text-blue-500 rounded-md text-base font-medium transition duration-300">Projects</a>
@@ -35,3 +40,14 @@ import {home} from '../commonTranslations.js';
         </div>
     </div>
 </nav>
+
+<style>
+    div#mobile-menu{
+        visibility: hidden;
+        display: none;
+    }
+    div#mobile-menu.expanded{
+        visibility: visible;
+        display: block;
+    }
+</style>

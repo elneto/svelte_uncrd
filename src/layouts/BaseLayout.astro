@@ -19,7 +19,7 @@ const {lang} = Astro.props;
 			<!-- un logo row -->
 			<LogoNameRow lang={lang}/>
 			<!-- navigation -->
-			<MainNavMenu lang={lang}/>
+			<MainNavMenu lang={lang} client:load/>
             <!-- content goes here -->
             <slot/>
 		</div>		
