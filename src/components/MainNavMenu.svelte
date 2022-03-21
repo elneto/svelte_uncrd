@@ -3,14 +3,8 @@
 // Main nav menu
 export let lang;
 
-const menuItems = [
-    // {name:'Home', url:'/'},
-    {name:'About', url:`/${lang}/about`},
-    {name:'Themes', url:'#'},
-    {name:'Events', url:`/${lang}/events`},
-    {name:'Publications', url:'#'},
-    {name:'News', url:'#'},
-];
+import {menuItems} from '../commonTranslations.js';
+import {home} from '../commonTranslations.js';
 </script>
 
 <nav class="shadow-lg mb-8">
@@ -18,9 +12,9 @@ const menuItems = [
         <div class="flex justify-between">
         
         <div class="hidden md:flex items-center space-x-1">
-            <a href="/{lang}" class="bg-un-light-gray py-4 px-5 font-semibold">Home</a>
-            {#each menuItems as {name, url}}
-                <a href={url} class="bg-un-menu-dark text-white py-4 px-5 font-semibold hover:text-black hover:bg-un-light-gray transition duration-300">{name}</a>
+            <a href="/{lang}" class="bg-un-light-gray py-4 px-5 font-semibold">{home[lang]}</a>
+            {#each menuItems[lang] as {name, url}}
+                <a href={'/' + lang + url} class="bg-un-menu-dark text-white py-4 px-5 font-semibold hover:text-black hover:bg-un-light-gray transition duration-300">{name}</a>
             {/each}
         </div>
         <div class="mr-10 flex md:hidden">

@@ -14,3 +14,26 @@ export const events = {
     'en':'Events', 
     'jp':'イベント'
 };
+
+export const home = {
+    'en':'Home', 
+    'jp':'家'
+};
+
+export let menuItems = ['en', 'jp'];
+menuItems['en'] = [
+    // {name:'Home', url:'/'},
+    {name:'About', url:`/about`},
+    {name:'Themes', url:'#'},
+    {name:'Events', url:`/events`},
+    {name:'Publications', url:'#'},
+    {name:'News', url:'#'},
+];
+menuItems['jp'] = [
+    // {name:'Home', url:'/'},
+    {name:'だいたい', url:`/about`},
+    {name:'テーマ', url:'#'},
+    {name:'イベント', url:`/events`},
+    {name:'出版物', url:'#'},
+    {name:'ニュース', url:'#'},
+];
