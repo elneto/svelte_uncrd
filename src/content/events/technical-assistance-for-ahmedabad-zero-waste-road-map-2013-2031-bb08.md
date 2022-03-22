@@ -15,7 +15,7 @@ The United Nations Centre for Regional Development (UNCRD) and Ahmedabad Municip
 
 The purpose of this consultation is to share the Pre-Final Draft Road Map for Zero Waste Ahmedabad among the key stakeholders and actors in the area of waste management. Through the consultation, it is expected that the group will reach a common understanding on the importance of having inter-ministerial/departmental coordination and support throughout the implementation of the Road Map.
 
-[A PDF test.](/images/letter_from_seo_vcs_2022_unoc_signed.pdf)
+[A PDF test.](/media/letter_from_seo_vcs_2022_unoc_signed.pdf)
 
 [**Programme** (PDF)](content/documents/Draft-Programme-Ahmedabad-Consultation.pdf)
 

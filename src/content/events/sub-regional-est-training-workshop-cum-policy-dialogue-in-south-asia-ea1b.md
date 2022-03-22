@@ -16,7 +16,7 @@ summary: UNCRD, South Asia Co-operative Environment Programme (SACEP), Ahmedabad
 ---
 From the Third Forum in 2008, eight South Asian countries (Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan, and Sri Lanka) actively participated in the Forum and through their intergovernmental body, South Asia Co-operative Environment Programme (SACEP), they expressed strong interest to organize an EST training workshop at sub-regional level as well as country levels in order to build capacity to deal with environment and transport issues from a South Asian perspective, which was approved by the eleventh and twelfth Governing Council of SACEP. As the first phase of collaboration, UNCRD organized the first Sub-Regional Training Workshop-cum-Policy Dialogue in recognition of the importance of a sub-regional approach to address the increasing problems in the transport sector in South Asia, in collaboration with South Asia Co-operative Environment Programme (SACEP), Ahmedabad Municipal Corporation (AMC), and Ministry of the Environment of the Government of Japan (MOEJ) in Ahmedabad, India.
 
-[Another PDF]( "/images/24714igo_list_for_2020_ocean_conference_20220322.pdf")
+[Another PDF]( "/media/24714igo_list_for_2020_ocean_conference_20220322.pdf")
 
 The city of Ahmedabad was chosen because it was the winner of the Sustainable Transport Award in 2010 due to its renowned successful BRTS (Bus Rapid Transit System), "JANMARG (The Peoplefs Way)". Therefore, in addition to two-day lecture and policy discussions, an excellent hands-on opportunity was provided for the participants from neighboring countries to have a half-day field trip to closely see how it looks and how the system is being operated.
 
