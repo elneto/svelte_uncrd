@@ -36,3 +36,5 @@ fields:
 - type: file
   name: image
   label: image
+pages:
+- src/content/featured/featured1.md
