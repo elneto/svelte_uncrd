@@ -2,6 +2,7 @@
 // Component Script (JavaScript)
 // HomePage
 // import firstImage from '../images/tuberculosis.jpg';
+import HPTitle from './HPTitle.astro'
 import { Markdown } from 'astro/components';
 const {lang} = Astro.props;
 const data = Astro.fetchContent('../content/featured/*.md');
@@ -24,28 +25,39 @@ featured.sort( (a,b) => {
     <img src={featured[0].image} alt="first" class="w-full col-span-12 lg:col-span-9">
     <div class="mt-4 col-span-12 lg:col-span-3 lg:mt-0">
         <a href={featured[0].link}>
-            <h2 class="text-un-menu-dark font-bold font-titles text-3xl mb-5 pb-3 border-b-[3px] border-un-blue">{featured[0].title}</h2>
+            <HPTitle title={featured[0].title} />
         </a>
         <Markdown content={featured[0].content.source} />
     </div>
 </div>
-<div class="grid gap-x-8 grid-cols-2">
+<div class="grid gap-x-8 grid-cols-1 md:grid-cols-2">
   <div class="flex flex-col">
       <img src={featured[1].image} alt="first" class="w-full col-span-6">
       <div class="mt-2">
           <a href={featured[1].link}>
-              <h2 class="text-un-menu-dark font-bold font-titles text-3xl mb-5 pb-3 border-b-[3px] border-un-blue">{featured[1].title}</h2>
+            <HPTitle title={featured[1].title} />
           </a>
           <Markdown content={featured[1].content.source} />
       </div>
   </div>
   <div class="flex flex-col">
-      <!-- <img src={featured[3].image} alt="first" class="w-full col-span-12 lg:col-span-9"> -->
-      <!-- <div class="mt-4 col-span-12 lg:col-span-3 lg:mt-0">
-          <a href={featured[0].link}>
-              <h2 class="text-un-menu-dark font-bold font-titles text-2xl mb-5 pb-3 border-b-[3px] border-un-blue">{featured[0].title}</h2>
+    <div class="grid gap-x-4 grid-cols-12">
+      <img src={featured[2].image} alt="first" class="w-full col-span-8 lg:col-span-7">
+      <div class="mt-4 col-span-12 lg:col-span-4 lg:mt-0">
+          <a href={featured[2].link}>
+              <h2 class="text-un-menu-dark font-bold font-titles mb-5 pb-3 border-b-[3px] border-un-blue text-xl">{featured[2].title}</h2>
           </a>
-          <Markdown content={featured[0].content.source} />
-      </div> -->
+          <Markdown content={featured[2].content.source} />
+      </div>
+    </div>
+    <div class="grid gap-x-4 grid-cols-12">
+      <img src={featured[3].image} alt="first" class="w-full col-span-8 lg:col-span-7">
+      <div class="mt-4 col-span-12 lg:col-span-4 lg:mt-0">
+          <a href={featured[3].link}>
+              <h2 class="text-un-menu-dark font-bold font-titles mb-5 pb-3 border-b-[3px] border-un-blue text-xl">{featured[3].title}</h2>
+          </a>
+          <Markdown content={featured[3].content.source} />
+      </div>
+    </div>
   </div>
 </div>
