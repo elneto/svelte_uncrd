@@ -4,13 +4,13 @@ import '../styles/global.css';
 import TopGrayBar from '../components/TopGrayBar.svelte'; 
 import LogoNameRow from '../components/LogoNameRow.svelte'; 
 import MainNavMenu from '../components/MainNavMenu.svelte'; 
-const {lang} = Astro.props;
+const {lang, title} = Astro.props;
 ---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<!-- top gray bar -->

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HomePage from '../../components/HomePage.astro';
-import {languages} from '../../commonTranslations.js';
+import {languages, siteTitle} from '../../commonTranslations.js';
 
 export async function getStaticPaths() {
   return languages.map(lang => ({ params: { lang: lang } }));
@@ -9,6 +9,6 @@ export async function getStaticPaths() {
 
 const {lang} = Astro.request.params;
 ---
-<BaseLayout lang={lang}>
+<BaseLayout lang={lang} title={siteTitle[lang]}>
 	<HomePage lang={lang}/>
 </BaseLayout>

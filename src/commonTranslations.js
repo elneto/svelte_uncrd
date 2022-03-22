@@ -1,5 +1,10 @@
 export const languages = ['en', 'jp'];
 
+export const siteTitle = {
+    'en':'United Nations Center for Regional Development', 
+    'jp':'国連 地域開発センター'
+}
+;
 export const nameSite = {
     'en':'United Nations<br>Center for Regional Development', 
     'jp':'国連<br>地域開発センター'

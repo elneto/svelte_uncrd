@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EventsList from '../../components/EventsList.svelte'
-import {languages} from '../../commonTranslations.js';
+import {languages, eventsT} from '../../commonTranslations.js';
 
 export async function getStaticPaths() {
   return languages.map(lang => ({ params: { lang: lang } }));
@@ -33,6 +33,6 @@ goodData.sort( (a,b) => {
   return 0;
 });
 ---
-<BaseLayout lang={lang} >
+<BaseLayout lang={lang} title={eventsT[lang]}>
   <EventsList lang={lang} data={goodData} client:load/>
 </BaseLayout>

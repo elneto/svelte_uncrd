@@ -5,7 +5,7 @@ import { Markdown } from 'astro/components';
 const {content} = Astro.props;
 ---
 
-<BaseLayout lang={content.lang}>
+<BaseLayout lang={content.lang} title={content.title}>
     <Banner title={content.title} location={content.location} datetime={content.date + ', ' + content.time}/>
     <article class="prose prose-blue max-w-none">
         <h4 class="uppercase">{content.category}</h4>

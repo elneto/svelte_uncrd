@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HomePage from '../components/HomePage.astro';
+import {siteTitle} from '../commonTranslations.js';
 ---
 <!-- We can change the default lang here -->
-<BaseLayout lang='en'>
+<BaseLayout lang='en' title={siteTitle['en']}>
 	<HomePage lang='en'/>
 </BaseLayout>
