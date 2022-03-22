@@ -1,0 +1,16 @@
+---
+import Page from '../../layouts/Page.astro';
+
+export async function getStaticPaths() {
+  const data = Astro.fetchContent('../../content/pages/*.md');
+  return data.map(content => {
+    return [
+      { params: { lang: content.lang, slug: content.slug }, props: { content } },
+    ]   
+  })
+};
+
+const {content} = Astro.props;
+---
+  
+<Page content={content}/>

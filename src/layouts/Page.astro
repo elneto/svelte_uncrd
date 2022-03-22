@@ -1,0 +1,12 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { Markdown } from 'astro/components';
+const {content} = Astro.props;
+---
+
+<BaseLayout lang={content.lang}>
+    <article class="container mx-auto prose prose-blue">
+        <h1>{content.title}</h1>
+        <Markdown content={content.astro.source} />
+    </article>
+</BaseLayout>
