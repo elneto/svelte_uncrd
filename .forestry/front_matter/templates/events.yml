@@ -8,13 +8,24 @@ fields:
   hidden: true
   default: "../../layouts/Event.astro"
   config:
+    required: false
+- name: lang
+  type: select
+  default: en
+  config:
     required: true
+    options:
+    - en
+    - jp
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Language
 - type: number
   name: id
   label: id
-- type: text
-  name: lang
-  label: lang
 - type: text
   name: slug
   label: slug
