@@ -6,6 +6,9 @@ fields:
   name: layout
   label: layout
   hidden: true
+  default: "../../components/HomePage.astro"
+  config:
+    required: true
 - type: number
   name: id
   label: id

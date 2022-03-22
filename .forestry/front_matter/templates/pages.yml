@@ -1,0 +1,18 @@
+---
+label: Pages
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: "../../layouts/Page.astro"
+- type: text
+  name: slug
+  label: slug
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: title
+  label: title
