@@ -1,12 +1,13 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Banner from '../components/Banner.astro';
 import { Markdown } from 'astro/components';
 const {content} = Astro.props;
 ---
 
 <BaseLayout lang={content.lang}>
+    <Banner title={content.title}/>
     <article class="container mx-auto prose prose-blue max-w-none">
-        <h1>{content.title}</h1>
         <Markdown content={content.astro.source} />
     </article>
 </BaseLayout>
