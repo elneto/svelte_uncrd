@@ -5,8 +5,8 @@ admin_path: admin
 webhook_url: 
 sections:
 - type: directory
-  path: src/content/pages
-  label: Pages
+  path: src/content/featured
+  label: Homepage stories
   create: documents
   match: "**/*"
 - type: directory
@@ -15,8 +15,8 @@ sections:
   create: documents
   match: "**/*"
 - type: directory
-  path: src/content/featured
-  label: Homepage stories
+  path: src/content/pages
+  label: Pages
   create: documents
   match: "**/*"
 upload_dir: uploads

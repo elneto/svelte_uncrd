@@ -5,6 +5,10 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
+  default: "../../layouts/Event.astro"
+  config:
+    required: true
 - type: number
   name: id
   label: id
