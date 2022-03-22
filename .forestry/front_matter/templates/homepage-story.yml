@@ -5,15 +5,25 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: number
   name: id
   label: id
 - type: text
   name: lang
   label: lang
+  config:
+    required: true
+    min: 2
+    max: 2
+  default: en
+  description: 'Possible values: <strong>en</strong> or <strong>jp</strong>'
 - type: text
   name: title
   label: title
+  config:
+    required: true
+    min: 3
 - type: text
   name: link
   label: link
