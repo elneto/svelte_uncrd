@@ -1,0 +1,9 @@
+---
+// Component Script (JavaScript)
+// Footer
+import {footer} from '../commonTranslations.js';
+const {lang} = Astro.props;
+---
+<section class="flex justify-end border-t-4 border-t-un-blue bg-gradient-to-r from-un-dark-gray via-slate-700 to-un-dark-gray text-white min-h-[5em] px-10 mt-8">
+   <div class="self-center text-sm">{footer[lang]}</div>
+</section>

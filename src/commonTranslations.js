@@ -25,6 +25,11 @@ export const home = {
     'jp':'家'
 };
 
+export const footer = {
+    'en':'A-Z SITE | INDEX | CONTACT | COPYRIGHT | FAQ | FRAUD ALERT | PRIVACY NOTICE | TERMS OF USE', 
+    'jp':'A-Zサイト| インデックス| お問い合わせ| 著作権| FAQ | 詐欺の警告| プライバシーに関するお知らせ| 利用規約',
+};
+
 export let menuItems = ['en', 'jp'];
 menuItems['en'] = [
     // {name:'Home', url:'/'},

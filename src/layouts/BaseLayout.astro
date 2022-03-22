@@ -4,6 +4,7 @@ import '../styles/global.css';
 import TopGrayBar from '../components/TopGrayBar.svelte'; 
 import LogoNameRow from '../components/LogoNameRow.svelte'; 
 import MainNavMenu from '../components/MainNavMenu.svelte'; 
+import Footer from '../components/Footer.astro'; 
 const {lang, title} = Astro.props;
 ---
 <html lang="en">
@@ -22,6 +23,7 @@ const {lang, title} = Astro.props;
 			<MainNavMenu lang={lang} client:load/>
             <!-- content goes here -->
             <slot/>
-		</div>		
+		</div>
+		<Footer lang={lang}/>
 	</body>
 </html>
