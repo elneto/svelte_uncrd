@@ -5,7 +5,7 @@ const {content} = Astro.props;
 ---
 
 <BaseLayout lang={content.lang}>
-    <article class="container mx-auto prose prose-blue">
+    <article class="container mx-auto prose prose-blue max-w-none">
         <h1>{content.title}</h1>
         <Markdown content={content.astro.source} />
     </article>
