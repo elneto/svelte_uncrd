@@ -1,12 +1,31 @@
 ---
 // Component Script (JavaScript)
 // HomePage
-import firstImage from '../images/tuberculosis.jpg';
+// import firstImage from '../images/tuberculosis.jpg';
+import { Markdown } from 'astro/components';
+const {lang} = Astro.props;
+const data = Astro.fetchContent('../content/featured/*.md');
+
+// this filters per language and per undefined
+let featured = data.filter(d => (d.lang.localeCompare(lang) == 0));
+featured.sort( (a,b) => {
+  if ( a.id < b.id ){
+    return -1;
+  }
+  else if ( a.id > b.id ){
+    return 1;
+  }
+  return 0;
+});
+
+// console.log(data);
 ---
 <div class="grid gap-x-8 grid-cols-12">
-    <img src={firstImage} alt="first" class="w-full col-span-12 lg:col-span-9">
+    <img src={featured[0].image} alt="first" class="w-full col-span-12 lg:col-span-9">
     <div class="mt-4 col-span-12 lg:col-span-3 lg:mt-0">
-        <h2 class="text-un-menu-dark font-bold font-titles text-2xl mb-5 pb-3 border-b-[3px] border-un-blue">UNCRD Webinars on 3R and Circular Economy</h2>
-        <p>Tuberculosis remains one of the deadliest infectious killers. Each day, over 4100 people lose their lives to TB and close to 28,000 fall ill with this preventable and curable disease. Global efforts to combat TB have saved an estimated 66 million lives since the year 2000. However, in the context of COVID-19, for the first time in over a decade, TB deaths increased in 2020. For this year’s World TB Day, WHO calls to ‘Invest to End TB. Save Lives.’ There is still an urgent need to invest resources to ramp up the fight against TB and achieve the commitments to end TB made by global leaders.</p>
+        <a href={featured[0].link}>
+            <h2 class="text-un-menu-dark font-bold font-titles text-2xl mb-5 pb-3 border-b-[3px] border-un-blue">{featured[0].title}</h2>
+        </a>
+        <Markdown content={featured[0].content.source} />
     </div>
 </div>

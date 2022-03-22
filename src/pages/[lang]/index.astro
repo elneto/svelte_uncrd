@@ -10,5 +10,5 @@ export async function getStaticPaths() {
 const {lang} = Astro.request.params;
 ---
 <BaseLayout lang={lang}>
-	<HomePage/>
+	<HomePage lang={lang}/>
 </BaseLayout>
