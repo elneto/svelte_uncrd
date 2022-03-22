@@ -5,6 +5,16 @@ admin_path: admin
 webhook_url: 
 sections:
 - type: directory
+  path: src/content/pages
+  label: Pages
+  create: documents
+  match: "**/*"
+- type: directory
+  path: src/content/events
+  label: Events
+  create: documents
+  match: "**/*"
+- type: directory
   path: src/content/featured
   label: Homepage stories
   create: documents
