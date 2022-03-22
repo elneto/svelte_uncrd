@@ -1,14 +1,13 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Banner from '../components/Banner.astro';
 import { Markdown } from 'astro/components';
 const {content} = Astro.props;
 ---
 
 <BaseLayout lang={content.lang}>
+    <Banner title={content.title} location={content.location} datetime={content.date + ', ' + content.time}/>
     <article class="prose prose-blue max-w-none">
-        <h2>{content.title}</h2>
-        <h3>{content.date} - {content.time}</h3>
-        <h3>{content.location}</h3>
         <h4 class="uppercase">{content.category}</h4>
         <Markdown content={content.astro.source} />
     </article>
