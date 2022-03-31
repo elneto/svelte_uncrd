@@ -2,7 +2,7 @@
 layout: "../../components/HomePage.astro"
 id: 1
 lang: en
-title: 4Rs (Reduce, Reuse Recycle)
+title: 3Rs (Reduce, Reuse Recycle)
 link: https://www.uncrd.or.jp/index.php?menu=377
 category: Policy Forum
 image: "/media/tuberculosis.jpg"
